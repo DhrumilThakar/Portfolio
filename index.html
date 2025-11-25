@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhrumil Thakar – Android Developer & Cloud Engineer</title>
+    <meta name="description" content="Portfolio of Dhrumil Thakar, Android App Developer and Cloud Engineer specializing in Kotlin, AWS, GCP, and system design.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="navbar-logo">
+                <span class="logo-text">DT</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#stack" class="nav-link">Tech Stack</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <!-- Left Content -->
+                <div class="hero-content">
+                    <div class="hero-tagline">Hi, I'm Dhrumil Thakar</div>
+                    <h1 class="hero-title">I build Android apps and cloud systems that scale.</h1>
+                    <p class="hero-subtitle">
+                        Specialized in building robust Android applications with Kotlin and Jetpack, 
+                        paired with scalable cloud architectures on AWS and GCP. I design end-to-end 
+                        systems, implement CI/CD pipelines, and focus on clean architecture principles 
+                        to create software that performs, scales, and lasts.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#" class="btn btn-secondary">Download Resume</a>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="hero-visual">
+                    <div class="device-graphic">
+                        <!-- Phone -->
+                        <div class="phone">
+                            <div class="phone-screen"></div>
+                        </div>
+
+                        <!-- Connecting Lines -->
+                        <svg class="connection-lines" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid meet">
+                            <line x1="120" y1="100" x2="180" y2="60" stroke="var(--accent-primary)" stroke-width="2" opacity="0.6"/>
+                            <line x1="120" y1="100" x2="180" y2="140" stroke="var(--accent-secondary)" stroke-width="2" opacity="0.6"/>
+                        </svg>
+
+                        <!-- Cloud -->
+                        <div class="cloud-box">
+                            ☁️
+                        </div>
+
+                        <!-- Server -->
+                        <div class="server-box">
+                            🖥️
+                        </div>
+
+                        <!-- Floating particles -->
+                        <div class="particle particle-1"></div>
+                        <div class="particle particle-2"></div>
+                        <div class="particle particle-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="stack" class="tech-stack">
+            <div class="section-container">
+                <h2 class="section-title">What I Work With</h2>
+
+                <!-- Android Category -->
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3 class="category-title">📱 Android Development</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Kotlin</div>
+                            <div class="tech-item">Jetpack Compose</div>
+                            <div class="tech-item">Android XML</div>
+                            <div class="tech-item">Material Design</div>
+                            <div class="tech-item">Firebase</div>
+                            <div class="tech-item">Android Studio</div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & Backend Category -->
+                    <div class="tech-category">
+                        <h3 class="category-title">☁️ Cloud & Backend</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">AWS</div>
+                            <div class="tech-item">Google Cloud (GCP)</div>
+                            <div class="tech-item">Docker</div>
+                            <div class="tech-item">REST APIs</div>
+                            <div class="tech-item">CI/CD Pipelines</div>
+                            <div class="tech-item">Microservices</div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Practices Category -->
+                    <div class="tech-category">
+                        <h3 class="category-title">🛠️ Tools & Practices</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Git & GitHub</div>
+                            <div class="tech-item">Linux</div>
+                            <div class="tech-item">Clean Architecture</div>
+                            <div class="tech-item">System Design</div>
+                            <div class="tech-item">SOLID Principles</div>
+                            <div class="tech-item">Agile</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="section-container">
+                <h2 class="section-title">Selected Projects</h2>
+
+                <!-- Project Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1: Threat Detection -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Threat-Detection System</h3>
+                            <span class="project-role">Cloud Engineer</span>
+                        </div>
+                        <p class="project-description">
+                            Enterprise-grade cybersecurity platform with ML-powered threat detection 
+                            and false-data deception mechanisms to mislead attackers.
+                        </p>
+
+                        <div class="project-narrative">
+                            <div class="narrative-item">
+                                <strong>Challenge:</strong> Building a scalable backend processing millions 
+                                of security events with sub-100ms latency.
+                            </div>
+                            <div class="narrative-item">
+                                <strong>Solution:</strong> Cloud-native architecture on AWS using Lambda, 
+                                DynamoDB, and real-time streaming with Kinesis.
+                            </div>
+                            <div class="narrative-item">
+                                <strong>Result:</strong> 99.9% uptime, processing 10M+ events daily.
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">Security</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="#" class="btn-link">GitHub</a>
+                            <a href="#" class="btn-link">Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Face Recognition -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Face Recognition Attendance</h3>
+                            <span class="project-role">Full Stack Developer</span>
+                        </div>
+                        <p class="project-description">
+                            Automated attendance system using real-time face recognition with 
+                            Android frontend and cloud backend.
+                        </p>
+
+                        <div class="project-narrative">
+                            <div class="narrative-item">
+                                <strong>Challenge:</strong> Accurate real-time face recognition across 
+                                diverse lighting conditions and camera angles.
+                            </div>
+                            <div class="narrative-item">
+                                <strong>Solution:</strong> Built Android app with ML Kit, Firebase backend, 
+                                and AWS Rekognition for enhanced accuracy.
+                            </div>
+                            <div class="narrative-item">
+                                <strong>Result:</strong> 1K+ downloads, 98.5% accuracy, 500+ students daily.
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">ML Kit</span>
+                            <span class="tag">Cloud</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="#" class="btn-link">GitHub</a>
+                            <a href="#" class="btn-link">Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Expense Sharing App -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Expense Sharing Android App</h3>
+                            <span class="project-role">Android Developer</span>
+                        </div>
+                        <p class="project-description">
+                            Full-featured expense splitting app with group management, 
+                            payment tracking, and Django REST backend.
+                        </p>
+
+                        <div class="project-narrative">
+                            <div class="narrative-item">
+                                <strong>Challenge:</strong> Simplifying complex money-splitting logic 
+                                with real-time updates across users.
+                            </div>
+                            <div class="narrative-item">
+                                <strong>Solution:</strong> Clean MVVM architecture, Django REST APIs, 
+                                WebSockets for real-time updates.
+                            </div>
+                            <div class="narrative-item">
+                                <strong>Result:</strong> 4.8-star rating, 70% faster payment settlement.
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">Room DB</span>
+                            <span class="tag">REST API</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="#" class="btn-link">GitHub</a>
+                            <a href="#" class="btn-link">Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Signify -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Signify – AI Sign Language Translator</h3>
+                            <span class="project-role">Full Stack & ML Engineer</span>
+                        </div>
+                        <p class="project-description">
+                            AI-powered mobile application that translates sign language to 
+                            text and speech in real-time.
+                        </p>
+
+                        <div class="project-narrative">
+                            <div class="narrative-item">
+                                <strong>Challenge:</strong> Real-time gesture recognition with high accuracy 
+                                while maintaining privacy on-device.
+                            </div>
+                            <div class="narrative-item">
+                                <strong>Solution:</strong> Custom TensorFlow Lite model, on-device inference, 
+                                cloud API for speech synthesis.
+                            </div>
+                            <div class="narrative-item">
+                                <strong>Result:</strong> 94% accuracy, assists hearing-impaired users.
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">TensorFlow Lite</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Cloud</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="#" class="btn-link">GitHub</a>
+                            <a href="#" class="btn-link">Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Typing Speed Tester -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Typing Speed Tester</h3>
+                            <span class="project-role">Java Developer</span>
+                        </div>
+                        <p class="project-description">
+                            Desktop application for testing and improving typing speed 
+                            with detailed analytics and performance tracking.
+                        </p>
+
+                        <div class="project-narrative">
+                            <div class="narrative-item">
+                                <strong>Challenge:</strong> Creating intuitive UI with accurate WPM calculation 
+                                and distraction-free experience.
+                            </div>
+                            <div class="narrative-item">
+                                <strong>Solution:</strong> Built with Java Swing, clean architecture, 
+                                real-time metrics calculation.
+                            </div>
+                            <div class="narrative-item">
+                                <strong>Result:</strong> Lightweight (<5MB), 60 FPS performance, comprehensive stats.
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Swing</span>
+                            <span class="tag">Desktop</span>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="#" class="btn-link">GitHub</a>
+                            <a href="#" class="btn-link">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+
+                <div class="about-content">
+                    <!-- Avatar -->
+                    <div class="about-avatar">
+                        <div class="avatar-placeholder"></div>
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="about-text">
+                        <p>
+                            I'm an Android developer and cloud engineer passionate about building elegant, 
+                            scalable solutions. With a strong foundation in mobile app development and cloud 
+                            architecture, I design systems that are both user-centric and built to perform at scale.
+                        </p>
+
+                        <p>
+                            My goal is to join top tech companies where I can tackle challenging problems in 
+                            mobile and cloud engineering. I'm driven by strong problem-solving skills, deep 
+                            understanding of DSA and system design, and a commitment to writing clean, 
+                            maintainable code.
+                        </p>
+
+                        <p>
+                            Beyond code, I believe in consistency and habit-building. I'm constantly learning, 
+                            reading tech blogs, and staying updated with industry trends. I love solving complex 
+                            problems and building systems that genuinely help people.
+                        </p>
+
+                        <!-- Highlight Box -->
+                        <div class="about-highlight">
+                            <strong>Current Focus:</strong> Advanced Android development, scalable cloud backends, 
+                            clean architecture patterns, and system design fundamentals.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="section-container">
+                <h2 class="section-title">Let's Build Something</h2>
+
+                <div class="contact-content">
+                    <!-- Contact Form -->
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                placeholder="Your Name" 
+                                required
+                                class="form-input"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="your@email.com" 
+                                required
+                                class="form-input"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                placeholder="Tell me about your project..." 
+                                rows="5"
+                                required
+                                class="form-input"
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <h3>Connect With Me</h3>
+                            <div class="social-grid">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                    GitHub
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                    LinkedIn
+                                </a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                    Twitter
+                                </a>
+                                <a href="mailto:dhrumil@example.com" class="social-link">
+                                    Email
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Resume Download -->
+                        <div class="resume-section">
+                            <a href="#" class="btn btn-secondary">Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Message -->
+                <div id="formMessage" class="form-message hidden">
+                    Thanks for reaching out! I'll get back to you soon.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 · Built by Dhrumil Thakar</p>
+            <p class="footer-signature">— Dhrumil</p>
+            <a href="#home" class="back-to-top">↑ Back to top</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!--
+    To deploy:
+    1. Open this folder in VS Code or Cursor.
+    2. Use a simple Live Server extension or any static server.
+    3. For production, host on GitHub Pages, Netlify, or any static host.
+    -->
+</body>
+</html>
