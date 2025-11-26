@@ -1,0 +1,42 @@
+# Node
+node_modules/
+/.package-lock.json
+/package-lock.json
+npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+
+# Next.js
+.next/
+out/
+
+# Build
+dist/
+coverage/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Images (keep committed avatars; exclude source large files if needed)
+#assets/*.psd
+
+# Ignore local OS files
+desktop.ini
+
+# Ignore node binary artifacts placed in repo by mistake
+node_modules/**/libvips-*
+node_modules/@img/sharp-win32-*
