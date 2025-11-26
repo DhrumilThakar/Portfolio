@@ -704,6 +704,16 @@ section:last-of-type {
   animation: float 3s ease-in-out infinite;
 }
 
+.avatar-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
+  animation: float 3s ease-in-out infinite;
+  border: 6px solid rgba(255,255,255,0.03);
+}
+
 .about-text p {
   margin-bottom: 1.5rem;
 }
