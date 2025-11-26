@@ -135,8 +135,8 @@ function setupFormHandling() {
         return;
       }
       
-      // Construct mailto link (since we can't send emails from static site)
-      const mailtoLink = `mailto:your-email@example.com?subject=Portfolio Contact from ${name}&body=${encodeURIComponent(
+      // Construct mailto link (opens user's email client)
+      const mailtoLink = `mailto:dhruvmilthakar@gmail.com?subject=Portfolio Contact from ${name}&body=${encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
       )}`;
       
