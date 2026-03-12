@@ -579,6 +579,57 @@ section:last-of-type {
 /* ============================================
    PROJECTS SECTION
    ============================================ */
+
+/* Filter Container */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-main);
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 1rem;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.filter-btn-active {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-color: var(--accent-primary);
+  color: #000;
+}
+
+.filter-btn-active:hover {
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+}
+
+/* Hidden projects */
+.project-card.hidden {
+  display: none;
+}
+
+/* No projects message */
+.no-projects-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
