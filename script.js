@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupFormHandling();
   setupScrollReveals();
   setupHeroAnimation();
+  setupProjectFilter();
 });
 
 // ============================================
@@ -135,21 +136,8 @@ function setupFormHandling() {
         return;
       }
       
-      // Construct mailto link (opens user's email client)
-      const mailtoLink = `mailto:dhruvmilthakar@gmail.com?subject=Portfolio Contact from ${name}&body=${encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-      )}`;
-      
-      // Show success message
-      showFormMessage('Thank you for your message! Your email client will open to send the message.', 'success');
-      
-      // Clear form
-      contactForm.reset();
-      
-      // Open email client
-      setTimeout(() => {
-        window.location.href = mailtoLink;
-      }, 500);
+      // Send email using EmailJS
+      sendEmailViaEmailJS(name, email, message, contactForm);
     });
   }
 }
@@ -181,6 +169,34 @@ function showFormMessage(message, type) {
       formMessage.classList.add('hidden');
     }, 5000);
   }
+}
+
+function sendEmailViaEmailJS(name, email, message, form) {
+  // Using Formspree for simple form handling (no backend needed)
+  const formData = new FormData();
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('message', message);
+  
+  fetch('https://formspree.io/f/mvzwrqbz', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+    .then(response => {
+      if (response.ok) {
+        showFormMessage('Thank you! Your message has been sent to dhruvmilthakar@gmail.com', 'success');
+        form.reset();
+      } else {
+        showFormMessage('Failed to send message. Please try again.', 'error');
+      }
+    })
+    .catch(error => {
+      showFormMessage('Failed to send message. Please try again or email directly.', 'error');
+      console.error('Form submission error:', error);
+    });
 }
 
 // ============================================
@@ -222,6 +238,55 @@ function setupHeroAnimation() {
   // Animate particles on page load
   particles.forEach((particle, index) => {
     particle.style.animation = `drift ${4 + index}s ease-in-out infinite`;
+  });
+}
+
+// ============================================
+// PROJECT FILTER
+// ============================================
+
+function setupProjectFilter() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+  const projectsGrid = document.querySelector('.projects-grid');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      
+      // Update active button styling
+      filterBtns.forEach(b => b.classList.remove('filter-btn-active'));
+      btn.classList.add('filter-btn-active');
+      
+      // Filter projects
+      let visibleCount = 0;
+      projectCards.forEach(card => {
+        const languages = card.dataset.languages || '';
+        const languageArray = languages.split(',').map(lang => lang.trim());
+        
+        if (filter === 'all' || languageArray.includes(filter)) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      
+      // Show/hide no projects message
+      let noProjectsMsg = projectsGrid.querySelector('.no-projects-message');
+      if (visibleCount === 0) {
+        if (!noProjectsMsg) {
+          noProjectsMsg = document.createElement('div');
+          noProjectsMsg.className = 'no-projects-message';
+          noProjectsMsg.textContent = `No projects found for ${filter === 'all' ? 'this filter' : filter} 😢`;
+          projectsGrid.appendChild(noProjectsMsg);
+        }
+      } else {
+        if (noProjectsMsg) {
+          noProjectsMsg.remove();
+        }
+      }
+    });
   });
 }
 
